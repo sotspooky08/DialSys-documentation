@@ -1,0 +1,74 @@
+dial 1
+e_jones:"potato Jones MWahahaWHAWHahwahhahahah"
+c_jones:"bruh~"
+choice{
+	if "lmao"
+		portrait.e_jones.shrugs
+		e_jones:"he's dumb"
+		portrait.c_jones.laughs
+		c_jones:"HAHAHAHhahah"
+		choice{
+			if "kys all of you"
+				portrait.e_jones.pouts
+				e_jones:"im done with you!"
+				narrative.e_jones.hate+
+				END
+			if "omg yall are so fun"
+				e_jones.hugs.player
+				e_jones:"you're the best!"
+				narrative.e_jones.love+
+				END
+		}
+	if "I have to really hurry! bye!"
+		c_jones:"omg, yea byeeee"
+		END
+	if "bruhh"
+		e_jones:"you're just dumb"
+		END
+}
+
+dial 2
+c_jones:"kys"
+END
+
+dial 3
+ALBERT_ENSTEIN:"E= mC^2 mate."
+choice{
+	if "yes"
+		Isaac_Newton:"F=ma bro"
+		Isaac_Newton:"If you disagree, you will fail in physics exam"
+		choice{
+		if "please dont fail me ;-;"
+			Planck: "E = hv"
+			Isaac_Newton: "Get out Planck. Nobody cares about you"
+			portrait.Isaac_Newton.punch.Planck
+			narrative.Planck.dies
+			END
+		if "get out"
+			Isaac_Newton: "you are a mistake"
+			portrait.Isaac_Newton.punch.Player
+			END
+		}
+	if "no"
+		Isaac_Newton: "You really said no!?"
+		Cindy_Jones: "BRO WHY IS THE APPLE GUY HERE"
+		END
+
+}
+dial 4
+Universal_character:"Hello there! what character do you want??"
+choice{
+	if "character 1"
+		character_1: "Hellooo I am character 1. The best of the best mwahahahahh"
+		choice{
+		if "okay. Byeeee"
+			character_1:"oh well. Farewell byeee"
+			END
+		if "tell me about yourself"
+			character_1: "Why should I!? i have no need to prove myself before you filthy traveler"
+			portrait.Universal_character.bonks.Char1
+			character_1: "okayy.. okayy chill"
+			END
+		}
+	
+}

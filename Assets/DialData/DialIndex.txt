@@ -1,0 +1,4 @@
+char1-location1-1
+char1-location2-2
+char2-location1-3
+char3-location3-4
