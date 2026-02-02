@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:DevTool01"
+    xmlns:models="clr-namespace:DevTool01.Models"
+    x:Class="DevTool01.MainPage"
+    x:DataType="local:MainPage"
+    Padding="10">
+
+    <Grid
+        RowDefinitions="Auto,Auto,Auto,Auto,*"
+        RowSpacing="15">
+
+        <Label
+            Grid.Row="0"
+            Text="Welcome To Haeg-innsa world"
+            FontSize="20"
+            HorizontalOptions="Center" />
+
+        <SearchBar Grid.Row="1" HorizontalOptions="Fill" Placeholder="Work In Progress" />
+
+        <Button
+            Grid.Row="2"
+            Text="+ Add New"
+            Clicked="NewConvoPage"
+            TextColor="White"
+            BackgroundColor="DarkCyan"
+            HorizontalOptions="End"
+            WidthRequest="120" />
+        
+        <Grid
+            Grid.Row="3"
+            Padding="5"
+            ColumnDefinitions="*,*,*,*,*"
+            BackgroundColor="#222">
+
+            <Label Text="Name" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Column="1" Text="Location" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Column="2" Text="Condition" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Column="3" Text="Remark" TextColor="White" HorizontalOptions="Center" />
+            <Label Grid.Column="4" Text="ConvoID" TextColor="White" HorizontalOptions="Center" />
+        </Grid>
+        
+        <CollectionView
+            Grid.Row="4"
+            ItemsSource="{Binding ObscConvos}"
+            ItemSizingStrategy="MeasureAllItems"
+            VerticalOptions="Fill">
+            
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="models:Convo">
+                    <Grid ColumnDefinitions="*,*,*,*,*" Padding="0" >
+                        
+                        <Border Stroke="Gray" StrokeThickness="1" >
+                            <Label Text="{Binding CharNames}" Padding="5" />
+                        </Border>
+                        
+                        <Border Grid.Column="1" Stroke="Gray" StrokeThickness="1">
+                            <Label Text="{Binding Location}" Padding="5" />
+                        </Border>
+                        
+                        <Border Grid.Column="2" Stroke="Gray" StrokeThickness="1">
+                            <Label Text="{Binding Condition}" Padding="5" />
+                        </Border>
+                        
+                        <Border Grid.Column="3" Stroke="Gray" StrokeThickness="1">
+                            <Label Text="{Binding Remark}" Padding="5" />
+                        </Border>
+                        
+                        <Border Grid.Column="4" Stroke="Gray" StrokeThickness="1">
+                            <Label Text="{Binding ConvoId}" Padding="5" HorizontalOptions="End"/>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+            
+        </CollectionView>
+
+    </Grid>
+</ContentPage>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:local="clr-namespace:DevTool01"
+                xmlns:models="clr-namespace:DevTool01.Models"
+                x:Class="DevTool01.AddConvoPage"
+                x:DataType="local:AddConvoPage"
+                >
+    <VerticalStackLayout Padding="10" Spacing="10">
+        <HorizontalStackLayout>
+        <Label
+            Text="Remark:"
+            VerticalOptions="Start" 
+            HorizontalOptions="Start"
+            TextColor="White"/>
+            <Entry
+            x:Name="RemarkEntry"
+            Text="{Binding RemarkDisplay, Mode=TwoWay}"
+            WidthRequest="250"
+            HorizontalOptions="Start"
+            VerticalOptions="Start"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout>
+            <Label
+                Text="Condition:"
+                VerticalOptions="Start" 
+                HorizontalOptions="Start"
+                TextColor="White"/>
+            <Entry
+                x:Name="ConditionEntry"
+                Text="{Binding ConditionDisplay, Mode=TwoWay}"
+                WidthRequest="250"
+                HorizontalOptions="Start"
+                VerticalOptions="Start"/>
+        </HorizontalStackLayout>
+        <HorizontalStackLayout
+            Spacing="150">
+        <CollectionView 
+            ItemsSource="{Binding ObscCharacters}"
+            ItemSizingStrategy="MeasureAllItems"
+            VerticalOptions="Fill"
+            HeightRequest="300"
+            >
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:obsCharacter">
+                    <HorizontalStackLayout>
+                            <CheckBox IsChecked="{Binding CharSelected}" ></CheckBox>
+                        <Label Text="{Binding CharName}"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        <CollectionView
+            ItemsSource="{Binding ObscLocations}">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="models:obsLocation">
+                    <HorizontalStackLayout>
+                        <RadioButton 
+                            GroupName="Location"
+                            IsChecked="{Binding LocSelected}"></RadioButton>
+                        <Label Text="{Binding LocName}"/>
+                    </HorizontalStackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+        </HorizontalStackLayout>
+        <Button
+            Text="+ Create"
+            Clicked="AddConvo"/>
+        <Button
+            Text="Back"
+            Clicked="GoBack"/>
+    </VerticalStackLayout>
+</ContentPage>

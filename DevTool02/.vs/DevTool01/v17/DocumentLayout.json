@@ -1,0 +1,224 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\dev\\dotNET-MAUI\\DevTool02\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\editconvopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:editconvopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:mauiprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\models\\maindial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:models\\maindial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\devtool01.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:devtool01.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\editconvopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:editconvopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\addconvopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:addconvopage.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:mainpage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\addconvopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:addconvopage.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\services\\dbinputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:services\\dbinputservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\models\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:models\\character.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:models\\location.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|c:\\dev\\dotnet-maui\\devtool02\\models\\dialnodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{00440DA8-92B5-416B-9C70-4B1A2AF15884}|DevTool01.csproj|solutionrelative:models\\dialnodes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 356,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{f96a0d64-71fd-316f-b663-924c78154f2a}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "DevTool01.csproj",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\DevTool01.csproj",
+              "RelativeDocumentMoniker": "DevTool01.csproj",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\DevTool01.csproj",
+              "RelativeToolTip": "DevTool01.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-01-31T06:17:08.712Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainDial.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\MainDial.cs",
+              "RelativeDocumentMoniker": "Models\\MainDial.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\MainDial.cs",
+              "RelativeToolTip": "Models\\MainDial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T08:25:53.466Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EditConvoPage.xaml.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\EditConvoPage.xaml.cs",
+              "RelativeDocumentMoniker": "EditConvoPage.xaml.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\EditConvoPage.xaml.cs",
+              "RelativeToolTip": "EditConvoPage.xaml.cs",
+              "ViewState": "AgIAACABAAAAAAAAAAAnwDcBAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T06:55:44.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Character.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\Character.cs",
+              "RelativeDocumentMoniker": "Models\\Character.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\Character.cs",
+              "RelativeToolTip": "Models\\Character.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T04:12:57.821Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddConvoPage.xaml.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\AddConvoPage.xaml.cs",
+              "RelativeDocumentMoniker": "AddConvoPage.xaml.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\AddConvoPage.xaml.cs",
+              "RelativeToolTip": "AddConvoPage.xaml.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAIA4wBUAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-28T02:02:38.295Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddConvoPage.xaml",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\AddConvoPage.xaml",
+              "RelativeDocumentMoniker": "AddConvoPage.xaml",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\AddConvoPage.xaml",
+              "RelativeToolTip": "AddConvoPage.xaml",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAowCMAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-28T00:49:35.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Location.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\Location.cs",
+              "RelativeDocumentMoniker": "Models\\Location.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\Location.cs",
+              "RelativeToolTip": "Models\\Location.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T04:23:13.335Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MauiProgram.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\MauiProgram.cs",
+              "RelativeDocumentMoniker": "MauiProgram.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\MauiProgram.cs",
+              "RelativeToolTip": "MauiProgram.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-30T04:33:04.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DBInputService.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\Services\\DBInputService.cs",
+              "RelativeDocumentMoniker": "Services\\DBInputService.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\Services\\DBInputService.cs",
+              "RelativeToolTip": "Services\\DBInputService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwEoAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-31T13:11:20.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditConvoPage.xaml",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\EditConvoPage.xaml",
+              "RelativeDocumentMoniker": "EditConvoPage.xaml",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\EditConvoPage.xaml",
+              "RelativeToolTip": "EditConvoPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-12-31T09:28:14.878Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DialNodes.cs",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\DialNodes.cs",
+              "RelativeDocumentMoniker": "Models\\DialNodes.cs",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\Models\\DialNodes.cs",
+              "RelativeToolTip": "Models\\DialNodes.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAowCAAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-02T02:53:55.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "MainPage.xaml",
+              "DocumentMoniker": "C:\\dev\\dotNET-MAUI\\DevTool02\\MainPage.xaml",
+              "RelativeDocumentMoniker": "MainPage.xaml",
+              "ToolTip": "C:\\dev\\dotNET-MAUI\\DevTool02\\MainPage.xaml",
+              "RelativeToolTip": "MainPage.xaml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-01-02T02:59:27.147Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

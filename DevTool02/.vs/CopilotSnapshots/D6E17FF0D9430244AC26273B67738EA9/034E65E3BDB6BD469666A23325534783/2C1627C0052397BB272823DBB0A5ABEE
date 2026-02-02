@@ -1,0 +1,257 @@
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using DevTool01.Data;
+using DevTool01.Models;
+using DevTool01.Services;
+using Microsoft.Maui.Controls.Shapes;
+using Microsoft.Maui.Converters;
+using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
+
+namespace DevTool01;
+
+public partial class EditConvoPage : ContentPage
+{
+    private readonly DataContext _dataContext;
+    public ObservableCollection<DialNodes> ObscDialNodes { get; } = [];
+    private string _dialContent = string.Empty;
+
+    private string _remark = string.Empty;
+    public string Remark {
+        get => _remark;
+        set {
+            _remark = value;
+            OnPropertyChanged();
+        }
+    }
+    private string _condition = string.Empty;
+    public string Condition {
+        get => _condition;
+        set {
+            _condition = value;
+            OnPropertyChanged();
+        }
+    }
+
+    public List<string> _charNames { get; set; }
+    public string _location { get; set; }
+    public int LastIndex { get; set; }
+
+    public List<MainDial> _TempMainDial { get; set; }
+
+    public VerticalStackLayout SelectedBlock { get; set; }
+    public int BlockIndex { get; set; } = 1;
+    public EditConvoPage(DataContext dataContext, List<string> CharNames, string Location)
+    {
+
+        InitializeComponent();
+        _dataContext = dataContext;
+        BindingContext = this;
+        _TempMainDial = new List<MainDial>();
+
+        LastIndex = _dataContext.MainDials.Count<MainDial>();
+
+        _charNames = CharNames;
+        _location = Location;
+
+        Remark = "";
+        Condition = "";
+        Label label = new()
+        {
+            Text = "Welcome to Haeg-innsa world! EUmmmmm",
+            FontSize = 50
+        };
+        RootNode.Children.Add(label);
+        SelectedBlock = RootNode;
+
+        var RootList = new DialNodeList();
+        RootNode.Children.Add(RootList);
+
+    }
+
+    public HorizontalStackLayout DialogueLine()
+    {
+
+        
+        Picker Speaker = new() { Title = "Select Speaker", MinimumWidthRequest = 200 };
+
+        Editor dialEditor = new() { Text = "", HeightRequest = 100, Placeholder = "Enter Dialogue", MinimumWidthRequest = 500 };
+
+        Picker actionPicker = new() { Title = "Select Action(optinoal)", MinimumWidthRequest = 200 };
+
+        Button removeBtn = new() { Text = "Remove", HorizontalOptions = LayoutOptions.End, WidthRequest = 200 };
+        removeBtn.Clicked += RemoveNode;
+
+        HorizontalStackLayout HSL = new() { Spacing = 10, HorizontalOptions = LayoutOptions.Fill, Padding = 10 };
+
+
+
+        actionPicker.Items.Add("None");
+        actionPicker.Items.Add("Expression");
+        actionPicker.Items.Add("Update stats");
+        actionPicker.Items.Add("other");
+        actionPicker.SelectedIndex = 0;
+
+        foreach (var name in _charNames) {
+            Speaker.Items.Add(name);
+        }
+
+        HSL.Children.Add(Speaker);;
+        HSL.Children.Add(dialEditor);
+        HSL.Children.Add(actionPicker);
+        HSL.Children.Add(removeBtn);
+
+        return HSL;
+    }
+
+
+
+    public abstract class DialBlock : VerticalStackLayout { }
+    public class ChoiceBlockLayout : DialBlock
+    {
+        private readonly EditConvoPage _parentPage;
+        private VerticalStackLayout _selectedNode;
+        
+        public ChoiceBlockLayout(EditConvoPage parentPage, VerticalStackLayout selectedNode)
+        {
+            _parentPage = parentPage;
+            _selectedNode = selectedNode;
+        }
+        public Layout returnChoiceBlockLayout()
+        {
+            HorizontalStackLayout main_hsl= new();
+            VerticalStackLayout vsl= new();
+            
+            Button AddDial = new Button() { Text = "AddChoice" };
+            AddDial.Clicked += _parentPage.AddChoice;
+            Border border = new Border()
+            {
+                StrokeThickness = 2,
+                Padding = 5,
+                MinimumHeightRequest = 100,
+                MinimumWidthRequest = 600,
+                Stroke = Colors.White,
+                Content = vsl
+            };
+            vsl.Children.Add(AddDial);
+            var spacer = new BoxView() { WidthRequest = 20 };
+            main_hsl.Children.Add(spacer);
+            main_hsl.Children.Add(vsl);
+
+            return main_hsl;
+        }
+    }
+
+
+
+    public class Choice : DialBlock
+    {
+        public int _CBIndex { get; set; }
+        public Editor PlayerChoice { get; set; }
+
+        public DialNodeList DialogueList { get; set; }
+        private readonly EditConvoPage _parentPage;
+        public Choice(EditConvoPage parentPage)
+        {
+            DialogueList = new DialNodeList();
+            PlayerChoice = new() { Text = "", HeightRequest = 50, Placeholder = "Enter Player Choice" };
+            _parentPage = parentPage;
+        }
+        public VerticalStackLayout returnChoice()
+        {
+            var VSL = new VerticalStackLayout { };
+
+            Editor choiceText = new() { 
+                Text = "",
+                HeightRequest = 100,
+                Placeholder = "Enter Dialogue for this choice",
+                MinimumWidthRequest=300
+            };
+
+            Button AddDial = new Button() { Text = "AddDialogue" };
+            AddDial.Clicked += _parentPage.AddDialNode;
+
+            VSL.Children.Add(PlayerChoice);
+            VSL.Children.Add(AddDial);
+
+            return VSL;
+
+        }
+    }
+
+
+    public class DialNodeList : HorizontalStackLayout
+    {
+        private readonly EditConvoPage _parentPage;
+        public DialNodeList()
+        {
+            Button AddDial = new() { Text = "AddDialogue" };
+            AddDial.Clicked += _parentPage.AddDialNode;
+            List<HorizontalStackLayout> DialLines = new();
+        }
+    }
+
+
+
+    public void AddDialNode(object? Sender, EventArgs e)
+    {
+        if (Sender is Button btn) {
+            if (btn.Parent is VerticalStackLayout VSL) {
+                VSL.Children.Add(DialogueLine());
+            } else {
+                RootNode.Children.Add(DialogueLine());
+            } 
+        }
+    }
+    public void AddChoiceBlock(object? sender, EventArgs e)
+    {
+        if (sender is Button btn) {
+            if (btn.Parent is VerticalStackLayout vsl) {
+                ChoiceBlockLayout CBL = new(this, vsl);
+                vsl.Children.Add(CBL.returnChoiceBlockLayout());
+            } else {
+                ChoiceBlockLayout CBL = new(this,RootNode);
+                RootNode.Children.Add(CBL.returnChoiceBlockLayout());
+            }
+        }
+    }
+    public void AddChoice(object? sender, EventArgs e)
+    {
+        bool a = false;
+        
+        if (sender is Button btn) {
+            var b = btn.Parent;
+            while (!a) {     
+                
+                if (b is Choice cb) {
+                    Choice choice = new(this);
+                    cb.Children.Add(choice.returnChoice());
+                    a = true;
+                }else if (b == RootNode) {
+                    RootNode.Children.Add(new Choice(this).returnChoice());
+                    a = true;
+                } else {
+                    b = b.Parent;
+                }
+            }
+        }
+    }
+    public async void RemoveNode(object? sender, EventArgs e)
+    {
+        
+        if (sender is Button btn && btn.Parent is HorizontalStackLayout hsl && hsl.Parent is Layout parentLayout) {
+            bool confirm = await DisplayAlert("You suree??", "Would you like to remove the dialogue line? All text entered here will be lost permanantly", "OK", "NO");
+            if (confirm) {
+                parentLayout.Children.Remove(hsl);
+            }
+        }
+    }
+    private void SaveConvo(object sender, EventArgs e)
+    {
+
+    }
+}
+
+    
+
